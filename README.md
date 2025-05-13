@@ -5,7 +5,7 @@ We will create an app that will be used by students in a network of elementary s
 # Reviewing the project requirements 
 ![requirements](images/requirements.png)
 
-![FD](images/flow-diagram.jpg)
+![flow](images/flow-diagram.jpg)
 
 ## Technology Stack
 Backend: Core Java
