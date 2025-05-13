@@ -14,6 +14,13 @@ public class MyJavaApp{
         String userName = scan.nextLine();
 
 
+        //Taking two numbers as input and storing inside two variables respectively
+        System.out.print("First number: ");
+        String num1 = scan.nextLine();
+        System.out.print("Second number: ");
+        String num2 = scan.nextLine();
+        System.out.println("The answer to " + num1 + " + " + num2 + " is " + (num1 + num2));
+
 
     }
 
