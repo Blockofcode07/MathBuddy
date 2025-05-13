@@ -1,51 +1,50 @@
 import java.util.Scanner;
 
-public class MyJavaApp{
+/*  Instead of writing long, repetitive blocks of boilerplate code in the main method, 
+we can use user-defined methods to make our code cleaner, easier to read, and more maintainable. 
+By creating reusable methods, we reduce duplication, minimize the chance of errors, 
+and improve the overall structure of our program.  */
 
+public class MyJavaApp {
 
+    // This method prints a formatted math question to the console
+    public static void printQuestion(int num1, String op, int num2) {
+        String question = "What is " + num1 + op + num2 + "? ";
+        System.out.print(question);
+    }
 
-    
-    public static void main(String[] args){
+    // This method displays the user's answer and the correct answer
+    public static void answerFeedback(int userAnswer, int correctAnswer) {
+        System.out.println("Your answer is: " + userAnswer);
+        System.out.println("The correct answer is: " + correctAnswer);
+    }
+
+    public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 
-        // Take input from user and save it in a variable
-        System.out.print("Please enter your name: ");
-        String userName = scan.nextLine();
+        int n1 = 6;
+        int n2 = 7;
 
-
-        int n1 = 4;
-        int n2 = 9;
-        int userAnswer;
-
-        String question = "What is " + n1 + " + " + n2 + "? "; 
-        System.out.print(question);
-        userAnswer = scan.nextInt();
-        System.out.println("Your answer is: "+ userAnswer);
-        // Calculating the correct answer
-        System.out.println("The correct answer is: " + (n1 + n2));
+        printQuestion(n1,"+",n2);
+        int userAnswer = scan.nextInt();
+        int correctAnswer = n1 + n2;   
+        answerFeedback(userAnswer, correctAnswer);    
         
-        question = "What is " + n1 + " - " + n2 + "? "; 
-        System.out.print(question);
+        printQuestion(n1,"-",n2);
         userAnswer = scan.nextInt();
-        System.out.println("Your answer is: "+ userAnswer);
-        // Calculating the correct answer
-        System.out.println("The correct answer is: " + (n1 - n2));
+        correctAnswer = n1 - n2;   
+        answerFeedback(userAnswer, correctAnswer);    
 
-        question = "What is " + n1 + " * " + n2 + "? "; 
-        System.out.print(question);
+        printQuestion(n1,"*",n2);
         userAnswer = scan.nextInt();
-        System.out.println("Your answer is: "+ userAnswer);
-        // Calculating the correct answer
-        System.out.println("The correct answer is: " + (n1 * n2));
+        correctAnswer = n1 * n2;   
+        answerFeedback(userAnswer, correctAnswer);  
 
-        question = "What is " + n1 + " / " + n2 + "? "; 
-        System.out.print(question);
+        printQuestion(n1,"/",n2);
         userAnswer = scan.nextInt();
-        System.out.println("Your answer is: "+ userAnswer);
-        // Calculating the correct answer
-        System.out.println("The correct answer is: " + (n1 / n2));     
-
+        correctAnswer = (int)(n1 / n2);   
+        answerFeedback(userAnswer, correctAnswer);   
 
     }
 
